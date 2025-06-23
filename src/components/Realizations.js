@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Realizations({ t }) {
   const images = [
-    "https://images.unsplash.com/photo-1601910872207-047e7b13f5c4",
+    "https://t4.ftcdn.net/jpg/01/53/88/83/360_F_153888363_iJZnEn9jG85FkD6Arhacc8MfZXBDXuE5.jpg",
     "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
-    "https://images.unsplash.com/photo-1581090700227-1e8b977ebfba",
+    "https://media.istockphoto.com/id/1442148484/pl/zdj%C4%99cie/rendering-3d-nowoczesnego-domu-podmiejskiego-w-ogrodzie.jpg?s=612x612&w=0&k=20&c=1AxWc5IwOk9nL9ECCG6PCT1UFNwsO0AWqgniMilZHkY=",
   ];
 
   return (
