@@ -16,6 +16,22 @@ export default function App() {
     alert('Dane zostały zapisane (wersja demo)');
     console.log('Form data:', form);
   };
+const [open, setOpen] = useState(null);
+
+const faqs = [
+  {
+    q: "Czy pomagacie w uzyskaniu pozwolenia na budowę?",
+    a: "Tak, pomagamy w kompletowaniu dokumentów, kontaktach z urzędem i składaniu wniosków.",
+  },
+  {
+    q: "Czy mogę przynieść własny projekt?",
+    a: "Tak – adaptujemy projekty gotowe oraz indywidualne, zgodnie z lokalnymi warunkami.",
+  },
+  {
+    q: "Na jakim terenie działacie?",
+    a: "Obsługujemy całe województwo łódzkie i mazowieckie.",
+  },
+];
 
   return (
     <div className="space-y-8 p-6 max-w-5xl mx-auto font-sans text-gray-800">
@@ -85,33 +101,56 @@ export default function App() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Zrealizowane Inwestycje</h2>
         <div className="grid md:grid-cols-3 gap-4">
-          {[4, 5, 6].map((r) => (
-            <img
-              key={r}
-              src={`https://source.unsplash.com/400x300/?home,${r}`}
-              alt={`Realizacja ${r}`}
-              className="rounded-xl shadow"
-            />
-          ))}
+          {[
+  "https://images.unsplash.com/photo-1601910872207-047e7b13f5c4", // budowa domu
+  "https://images.unsplash.com/photo-1570129477492-45c003edd2be", // konstrukcja
+  "https://images.unsplash.com/photo-1581090700227-1e8b977ebfba", // prace murarskie
+].map((url, i) => (
+  <img
+    key={i}
+    src={url}
+    alt={`Inwestycja ${i + 1}`}
+    className="rounded-xl shadow object-cover h-48 w-full"
+  />
+))}
         </div>
       </section>
 
       {/* Technologie */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Technologie Budowy</h2>
-        <ul className="list-disc list-inside space-y-1">
-          <li>Tradycyjna technologia murowana</li>
-          <li>Konstrukcja szkieletowa</li>
-          <li>Technologia keramzytowa</li>
-        </ul>
-      </section>
+  <h2 className="text-2xl font-semibold">Technologie Budowy</h2>
+  <ul className="list-none space-y-3">
+    <li className="flex items-center gap-3">
+      <img src="https://cdn-icons-png.flaticon.com/128/2599/2599695.png" alt="murowana" className="w-6 h-6" />
+      Tradycyjna technologia murowana
+    </li>
+    <li className="flex items-center gap-3">
+      <img src="https://cdn-icons-png.flaticon.com/128/2599/2599691.png" alt="szkieletowa" className="w-6 h-6" />
+      Konstrukcja szkieletowa
+    </li>
+    <li className="flex items-center gap-3">
+      <img src="https://cdn-icons-png.flaticon.com/128/2599/2599673.png" alt="keramzyt" className="w-6 h-6" />
+      Technologia keramzytowa
+    </li>
+  </ul>
+</section>
 
       {/* FAQ */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Najczęstsze pytania</h2>
-        <p className="text-sm">Czy pomagacie w uzyskaniu pozwolenia na budowę? – Tak.</p>
-        <p className="text-sm">Czy można dostarczyć własny projekt? – Oczywiście.</p>
-      </section>
+  <h2 className="text-2xl font-semibold">Najczęstsze pytania</h2>
+  {faqs.map((item, i) => (
+    <div key={i} className="border-b py-3">
+      <button
+        onClick={() => setOpen(open === i ? null : i)}
+        className="text-left w-full flex justify-between items-center font-semibold"
+      >
+        <span>{item.q}</span>
+        <span className="text-xl">{open === i ? "−" : "+"}</span>
+      </button>
+      {open === i && <p className="text-sm text-gray-600 mt-2">{item.a}</p>}
+    </div>
+  ))}
+</section>
 
       {/* Formularz */}
       <section className="space-y-4">
