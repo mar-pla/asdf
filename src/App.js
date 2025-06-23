@@ -9,7 +9,7 @@ function App() {
   const faqs = t.faqs;
 
   return (
-    <main className="font-sans p-4 max-w-6xl mx-auto space-y-10 bg-[#fff7f0]">
+    <main className="font-sans px-4 py-8 max-w-screen-xl mx-auto space-y-16 bg-white rounded-lg shadow-lg">
       <div className="flex justify-end gap-2">
         <button onClick={() => setLang("pl")} className={lang === "pl" ? "font-bold text-orange-600" : ""}>PL</button>
         <button onClick={() => setLang("en")} className={lang === "en" ? "font-bold text-orange-600" : ""}>EN</button>
