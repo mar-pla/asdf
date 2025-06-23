@@ -6,36 +6,23 @@ function App() {
   const t = translations[lang];
   const [open, setOpen] = useState(null);
 
-  const faqs = [
-    {
-      q: t.faqs?.[0]?.q || "Czy pomagacie w uzyskaniu pozwolenia na budowę?",
-      a: t.faqs?.[0]?.a || "Tak, pomagamy w kompletowaniu dokumentów, kontaktach z urzędem i składaniu wniosków.",
-    },
-    {
-      q: t.faqs?.[1]?.q || "Czy mogę przynieść własny projekt?",
-      a: t.faqs?.[1]?.a || "Tak – adaptujemy projekty gotowe oraz indywidualne, zgodnie z lokalnymi warunkami.",
-    },
-    {
-      q: t.faqs?.[2]?.q || "Na jakim terenie działacie?",
-      a: t.faqs?.[2]?.a || "Obsługujemy całe województwo łódzkie i mazowieckie.",
-    },
-  ];
+  const faqs = t.faqs;
 
   return (
-    <main className="font-sans p-4 max-w-6xl mx-auto space-y-10">
+    <main className="font-sans p-4 max-w-6xl mx-auto space-y-10 bg-[#fff7f0]">
       <div className="flex justify-end gap-2">
-        <button onClick={() => setLang("pl")} className={lang === "pl" ? "font-bold" : ""}>PL</button>
-        <button onClick={() => setLang("en")} className={lang === "en" ? "font-bold" : ""}>EN</button>
+        <button onClick={() => setLang("pl")} className={lang === "pl" ? "font-bold text-orange-600" : ""}>PL</button>
+        <button onClick={() => setLang("en")} className={lang === "en" ? "font-bold text-orange-600" : ""}>EN</button>
       </div>
 
       <section className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">{t.hero.title}</h1>
+        <h1 className="text-4xl font-bold text-orange-600">{t.hero.title}</h1>
         <p className="text-xl">{t.hero.subtitle}</p>
-        <button className="bg-blue-600 text-white px-6 py-2 rounded-full">{t.hero.cta}</button>
+        <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full">{t.hero.cta}</button>
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold">{t.projects}</h2>
+        <h2 className="text-2xl font-semibold text-orange-600">{t.projects}</h2>
         <div className="grid md:grid-cols-3 gap-4 mt-4">
           {[
             {
@@ -68,7 +55,7 @@ function App() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold">{t.realizations}</h2>
+        <h2 className="text-2xl font-semibold text-orange-600">{t.realizations}</h2>
         <div className="grid md:grid-cols-3 gap-4 mt-4">
           {[
             "https://images.unsplash.com/photo-1601910872207-047e7b13f5c4",
@@ -86,7 +73,7 @@ function App() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold">{t.technologies}</h2>
+        <h2 className="text-2xl font-semibold text-orange-600">{t.technologies}</h2>
         <ul className="list-none space-y-3 mt-4">
           <li className="flex items-center gap-3">
             <img src="https://cdn-icons-png.flaticon.com/128/2599/2599695.png" alt="murowana" className="w-6 h-6" />
@@ -104,7 +91,7 @@ function App() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold">{t.faq}</h2>
+        <h2 className="text-2xl font-semibold text-orange-600">{t.faq}</h2>
         <div className="mt-4 space-y-2">
           {faqs.map((item, i) => (
             <div key={i} className="border-b py-3">
@@ -122,12 +109,12 @@ function App() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold">{t.contact}</h2>
+        <h2 className="text-2xl font-semibold text-orange-600">{t.contact}</h2>
         <form className="space-y-4 mt-4">
           <input type="text" placeholder={t.form.name} className="border p-2 w-full" />
           <input type="email" placeholder={t.form.email} className="border p-2 w-full" />
           <textarea placeholder={t.form.message} className="border p-2 w-full" rows="4"></textarea>
-          <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">{t.form.send}</button>
+          <button type="submit" className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded">{t.form.send}</button>
         </form>
       </section>
     </main>
