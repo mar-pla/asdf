@@ -9,7 +9,7 @@ export default function Projects({ t }) {
     },
     {
       title: "Dom Parterowy",
-      img: "https://images.unsplash.com/photo-1572120360610-d971b9c7a081",
+      img: "https://projektyzwizja.pl//uploads/projekty/ekonomiczny-5g/ekonomiczny5-garaz-front1-1200_1649071119.jpeg",
       desc: "Projekt ekonomiczny z garażem jednostanowiskowym",
     },
     {
