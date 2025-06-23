@@ -41,7 +41,6 @@ const translations = {
   },
 };
 
-export default translations;
 
 translations.pl.faqs = [
   { q: "Czy pomagacie w uzyskaniu pozwolenia na budowę?", a: "Tak, pomagamy w kompletowaniu dokumentów, kontaktach z urzędem i składaniu wniosków." },
