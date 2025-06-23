@@ -45,37 +45,4 @@ function App() {
             },
             {
               title: "Dom Parterowy",
-              img: "https://images.unsplash.com/photo-1572120360610-d971b9c7a081",
-              desc: "Projekt ekonomiczny z garażem jednostanowiskowym",
-            },
-            {
-              title: "Styl Skandynawski",
-              img: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
-              desc: "Dom z drewnianą elewacją i dużymi przeszkleniami",
-            },
-          ].map((project, i) => (
-            <div key={i} className="bg-white rounded-xl shadow p-4">
-              <img
-                src={project.img}
-                alt={project.title}
-                className="rounded-xl h-52 w-full object-cover"
-              />
-              <h3 className="font-semibold mt-2 text-blue-700">{project.title}</h3>
-              <p className="text-sm text-gray-500">{project.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <h2 className="text-2xl font-semibold text-blue-700">{t.realizations}</h2>
-        <div className="grid md:grid-cols-3 gap-4 mt-4">
-          {[
-            "https://images.unsplash.com/photo-1601910872207-047e7b13f5c4",
-            "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
-            "https://images.unsplash.com/photo-1581090700227-1e8b977ebfba",
-          ].map((url, i) => (
-            <img
-              key={i}
-              src={url}
-              alt={`Inwestycja ${i + 1}`}
+              img: "https://images.unsplash.com/photo
