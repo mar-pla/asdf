@@ -51,18 +51,34 @@ export default function App() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Nasze Projekty</h2>
         <div className="grid md:grid-cols-3 gap-4">
-          {[1, 2, 3].map((p) => (
-            <div key={p} className="bg-white rounded-xl shadow p-4">
-              <img
-                src={`https://source.unsplash.com/400x300/?house,${p}`}
-                alt={`Projekt ${p}`}
-                className="rounded-xl"
-              />
-              <h3 className="font-semibold mt-2">Projekt Domu {p}</h3>
-              <p className="text-sm text-gray-500">100–160 m² · Nowoczesna bryła</p>
-            </div>
-          ))}
-        </div>
+  {[
+    {
+      title: "Nowoczesna Willa",
+      img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      desc: "Dom 160 m² z płaskim dachem i tarasem",
+    },
+    {
+      title: "Dom Parterowy",
+      img: "https://images.unsplash.com/photo-1572120360610-d971b9c7a081",
+      desc: "Projekt ekonomiczny z garażem jednostanowiskowym",
+    },
+    {
+      title: "Styl Skandynawski",
+      img: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
+      desc: "Dom z drewnianą elewacją i dużymi przeszkleniami",
+    },
+  ].map((project, i) => (
+    <div key={i} className="bg-white rounded-xl shadow p-4">
+      <img
+        src={project.img}
+        alt={project.title}
+        className="rounded-xl h-52 w-full object-cover"
+      />
+      <h3 className="font-semibold mt-2">{project.title}</h3>
+      <p className="text-sm text-gray-500">{project.desc}</p>
+    </div>
+  ))}
+</div>
       </section>
 
       {/* Realizacje */}
