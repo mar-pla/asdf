@@ -3,7 +3,7 @@ import React from "react";
 export default function Technologies({ t }) {
   return (
     <section className="p-8 space-y-6">
-      <h1 className="text-2xl font-bold text-center mb-6">{t.technologies}</h1>
+      <h1 className="text-2xl font-bold text-center mb-6">{t.offer}</h1>
       <div className="grid md:grid-cols-3 gap-6">
         {[
           {
