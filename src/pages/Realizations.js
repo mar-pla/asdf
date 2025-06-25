@@ -3,7 +3,7 @@ import React from "react";
 export default function Realizations({ t }) {
   const realizations = [
     {
-      img: "https://images.unsplash.com/photo-1601910872207-047e7b13f5c4",
+      img: "https://depositphotos.com/pl/photos/dom-jednorodzinny.html",
       desc: "Realizacja pod Łodzią – dom piętrowy, 180 m², stan surowy zamknięty",
     },
     {
@@ -11,7 +11,7 @@ export default function Realizations({ t }) {
       desc: "Inwestycja w Skierniewicach – dom parterowy, 130 m², technologia szkieletowa",
     },
     {
-      img: "https://images.unsplash.com/photo-1581090700227-1e8b977ebfba",
+      img: "https://depositphotos.com/pl/photos/dom-jednorodzinny.html",
       desc: "Dom w stylu klasycznym – projekt indywidualny, Warszawa",
     },
   ];
