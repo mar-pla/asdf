@@ -12,7 +12,7 @@ export default function About({ t }) {
         oraz adaptacji projektów.
       </p>
       <img
-        src="https://images.unsplash.com/photo-1581090700227-1e8b977ebfba"
+        src="https://www.shutterstock.com/image-photo/group-professional-construction-workers-new-260nw-245176900.jpg"
         alt="O nas"
         className="rounded-xl shadow-md w-full object-cover max-h-[400px]"
       />
