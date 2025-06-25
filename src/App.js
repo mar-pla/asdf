@@ -1,36 +1,26 @@
-
-import React, { useState } from "react";
-import translations from "./translations";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import Realizations from "./components/Realizations";
-import Technologies from "./components/Technologies";
-import Faq from "./components/Faq";
-import ContactForm from "./components/ContactForm";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Realizations from "./pages/Realizations";
+import Technologies from "./pages/Technologies";
+import Contact from "./pages/Contact";
 
 function App() {
-  const [lang, setLang] = useState("pl");
-  const t = translations[lang];
-  const [open, setOpen] = useState(null);
-
-  const faqs = t.faqs || [];
-
   return (
-    <main className="font-sans p-4 max-w-6xl mx-auto space-y-10">
-      <div className="flex justify-end gap-2">
-        <button onClick={() => setLang("pl")} className={lang === "pl" ? "font-bold" : ""}>PL</button>
-        <button onClick={() => setLang("en")} className={lang === "en" ? "font-bold" : ""}>EN</button>
-      </div>
-
-      <Navbar t={t} />
-      <Hero t={t} />
-      <Projects t={t} />
-      <Realizations t={t} />
-      <Technologies t={t} />
-      <Faq t={t} faqs={faqs} open={open} setOpen={setOpen} />
-      <ContactForm t={t} />
-    </main>
+    <Router>
+      <Navbar />
+      <main className="p-4 max-w-6xl mx-auto">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projekty" element={<Projects />} />
+          <Route path="/realizacje" element={<Realizations />} />
+          <Route path="/technologie" element={<Technologies />} />
+          <Route path="/kontakt" element={<Contact />} />
+        </Routes>
+      </main>
+    </Router>
   );
 }
 

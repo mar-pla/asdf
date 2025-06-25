@@ -1,14 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function Navbar({ t }) {
+export default function Navbar() {
   return (
     <nav className="sticky top-0 bg-white shadow z-10 p-4 flex justify-between">
       <span className="font-bold">BudDom</span>
       <div className="flex gap-4">
-        <a href="#projects" className="hover:underline">{t.projects}</a>
-        <a href="#technologies" className="hover:underline">{t.technologies}</a>
-        <a href="#faq" className="hover:underline">{t.faq}</a>
-        <a href="#contact" className="hover:underline">{t.contact}</a>
+        <Link to="/">Strona główna</Link>
+        <Link to="/projekty">Nasze Projekty</Link>
+        <Link to="/realizacje">Realizacje</Link>
+        <Link to="/technologie">Technologie</Link>
+        <Link to="/kontakt">Kontakt</Link>
       </div>
     </nav>
   );
