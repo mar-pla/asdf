@@ -5,7 +5,8 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Realizations from "./pages/Realizations";
-import Technologies from "./pages/Technologies";
+import About from "./pages/About";
+import Technologies from "./pages/Technologies"; // „Oferta”
 import Contact from "./pages/Contact";
 
 function App() {
