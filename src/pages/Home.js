@@ -76,7 +76,7 @@ export default function Home({ t }) {
             desc: "Dom 160 m² z płaskim dachem i tarasem"
           }, {
             title: "Dom Parterowy",
-            img: "https://images.unsplash.com/photo-1572120360610-d971b9c7a081",
+            img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
             desc: "Projekt ekonomiczny z garażem jednostanowiskowym"
           }, {
             title: "Styl Skandynawski",
