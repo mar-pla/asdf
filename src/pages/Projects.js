@@ -9,7 +9,7 @@ export default function Projects({ t }) {
     },
     {
       title: "Dom parterowy z garażem",
-      img: "https://depositphotos.com/pl/photos/dom-jednorodzinny.html",
+      img: "https://st2.depositphotos.com/2249091/5921/i/450/depositphotos_59211501-stock-photo-single-family-home-with-patio.jpg",
       desc: "120 m², ekonomiczny układ, 3 sypialnie",
     },
     {
